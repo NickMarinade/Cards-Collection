@@ -1,3 +1,5 @@
+
+
 //Display the document title in the console
 console.log(document.title);
 
@@ -15,3 +17,7 @@ document.querySelectorAll('body *');
 //Using the children method and a for ... of  loop, display every children elements
 for (let child of document.body.children) { 
     console.log(child.tagName) };
+
+
+
+
