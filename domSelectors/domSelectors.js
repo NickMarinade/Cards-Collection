@@ -18,4 +18,11 @@ for (let i = 1; i < document.querySelectorAll('p').length; i++) {
   }
 
 
+  //const collection = document.querySelectorAll('p');
+  //console.log(collection);
+
+  //collection[1].style.color = '#' + randomColor;
+  //collection[2].style.color = '#' + randomColor;
+  //collection[3].style.color = '#' + randomColor;
+
 
