@@ -5,3 +5,11 @@ document.querySelector('.important').setAttribute('title', 'This is an important
 //Select all the img tags and loop through them. If they have no important class, turn their display property to none
 
 document.querySelector('img.important').style.display = 'none';
+
+//Loop through all the paragraphs and display their content in the console. If the paragraph has a class, display its classname as well
+console.log(document.querySelectorAll('p'))
+
+//Give each of the paragraph a random text color (different for each one) UNLESS it has a class then leave it as it is.
+const randomColor = Math.floor(Math.random()*16777215).toString(16);
+
+document.querySelector('p').style.color = '#' + randomColor;
