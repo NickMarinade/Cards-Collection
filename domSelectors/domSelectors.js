@@ -12,4 +12,10 @@ console.log(document.querySelectorAll('p'))
 //Give each of the paragraph a random text color (different for each one) UNLESS it has a class then leave it as it is.
 const randomColor = Math.floor(Math.random()*16777215).toString(16);
 
-document.querySelector('p').style.color = '#' + randomColor;
+for (let i = 1; i < document.querySelectorAll('p').length; i++) {
+    
+    document.querySelectorAll('p')[i].style.color = '#' + randomColor;
+  }
+
+
+
