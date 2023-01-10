@@ -2,10 +2,19 @@
 let names = ["Beatrice", "Claire", "Céline", "David", "Freke", "James", "Jean_Margrethe", "Jitskedh", "Juraj", "Marieke", "Nick Marenich",
  "Niels", "Pious", "RachidM", "Raoul", "sander", "Sarah B", "Seppe Lescur", "Sofie", "Sven S.", "Tesse", "Thomas Keno", "Toon", "Vincent Clarysse", "Ward", "Xander", "Yoursa.B"]
 
- let name1 = names[Math.floor(Math.random()*names.length)];
+let alreadyDone = [];
 
-// Modify the script.js to create a new <section> with a random background-color for each learner in your group.
-// This section should contain a paragraph with the name of the learner. Those sections should be appended in the <article>
+const randomName = (names) => {
+  if (alreadyDone.length === 0) {
+    for (let i = 0; i < names.length; i++) alreadyDone.push(i);
+  }
+  let randomNameIndex = Math.floor(Math.random() * alreadyDone.length);
+  let indexOfItemInMyNames = alreadyDone[randomNameIndex];
+  alreadyDone.splice(randomNameIndex, 1);
+  return names[indexOfItemInMyNames];
+};
+//console.log(randomName(names))
+
 
  
 
@@ -14,7 +23,7 @@ let names = ["Beatrice", "Claire", "Céline", "David", "Freke", "James", "Jean_M
     //console.log(newSection);
     const newPara = document.createElement("p");
     //console.log(newPara);
-    const newContent = document.createTextNode(name1);
+    const newContent = document.createTextNode(randomName(names));
     newPara.appendChild(newContent);
     newSection.appendChild(newPara);
     const currentArticle = document.querySelector("article");
@@ -27,7 +36,7 @@ let names = ["Beatrice", "Claire", "Céline", "David", "Freke", "James", "Jean_M
     
 }
 
- for (var i = 1; i < 8; i++) addElement(i);
+ for (var i = 0; i < names.length; i++) addElement(i);
 
 
 
