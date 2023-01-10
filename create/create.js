@@ -3,6 +3,17 @@ let names = ["Beatrice", "Claire", "Céline", "David", "Freke", "James", "Jean_M
  "Niels", "Pious", "RachidM", "Raoul", "sander", "Sarah B", "Seppe Lescur", "Sofie", "Sven S.", "Tesse", "Thomas Keno", "Toon", "Vincent Clarysse", "Ward", "Xander", "Yoursa.B"]
 
 let alreadyDone = [];
+let alreadyDoneColors = [];
+
+let colors = [];
+while (colors.length < 500) {
+    do {
+        var color = Math.floor((Math.random()*1000000)+1);
+    } while (colors.indexOf(color) >= 0);
+    colors.push("#" + ("000000" + color.toString(16)).slice(-6));
+}
+//console.log(colors);
+
 
 const randomName = (names) => {
   if (alreadyDone.length === 0) {
@@ -13,19 +24,10 @@ const randomName = (names) => {
   alreadyDone.splice(randomNameIndex, 1);
   return names[indexOfItemInMyNames];
 };
-//console.log(randomName(names))
-
-// var colors = [];
-// while (colors.length < 100) {
-//     do {
-//         var color = Math.floor((Math.random()*1000000)+1);
-//     } while (colors.indexOf(color) >= 0);
-//     colors.push("#" + ("000000" + color.toString(16)).slice(-6));
-// }
-// console.log(colors);
+console.log(randomName(names));
+console.log(randomName(colors));
 
 
- 
 
  function addElement() {  
     const newSection = document.createElement("section");
@@ -47,36 +49,15 @@ const randomName = (names) => {
 
  for (var i = 0; i < names.length; i++) addElement(i);
 
-
-
- function random_bg_color() {
-    var x = Math.floor(Math.random() * 256);
-    var y = Math.floor(Math.random() * 256);
-    var z = Math.floor(Math.random() * 256);
-    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-    //console.log(bgColor);
-    for (let i = 0; i < document.querySelectorAll('section').length; i++) {
+ for (let i = 0; i < document.querySelectorAll('section').length; i++) {
     
-        document.querySelectorAll('section')[i].style.background = bgColor;
-      }
-     //document.body.style.background = bgColor;
-    }
-    function random_color() {
-        var x = Math.floor(Math.random() * 256);
-        var y = Math.floor(Math.random() * 256);
-        var z = Math.floor(Math.random() * 256);
-        var bgColor = "rgb(" + x + "," + y + "," + z + ")";
-        //console.log(bgColor);
-    
-         //document.body.style.color = bgColor;
-         for (let i = 0; i < document.querySelectorAll('section').length; i++) {
-    
-            document.querySelectorAll('section')[i].style.color = bgColor;
-          }
+          document.querySelectorAll('section')[i].style.background = randomName(colors);
+          document.querySelectorAll('section')[i].style.color = randomName(colors);
         }
-    random_bg_color();
-    random_color();
-    
+
+
+
+
 
 
 
