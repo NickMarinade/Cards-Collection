@@ -3,16 +3,17 @@ let names = ["Beatrice", "Claire", "Céline", "David", "Freke", "James", "Jean_M
  "Niels", "Pious", "RachidM", "Raoul", "sander", "Sarah B", "Seppe Lescur", "Sofie", "Sven S.", "Tesse", "Thomas Keno", "Toon", "Vincent Clarysse", "Ward", "Xander", "Yoursa.B"]
 
 let alreadyDone = [];
-let alreadyDoneColors = [];
 
 let colors = [];
 while (colors.length < 500) {
     do {
-        var color = Math.floor((Math.random()*1000000)+1);
+        var color = Math.floor((Math.random()*16777215));
     } while (colors.indexOf(color) >= 0);
-    colors.push("#" + ("000000" + color.toString(16)).slice(-6));
+    colors.push("#" + (color.toString(16)).slice(-6));
 }
 //console.log(colors);
+
+
 
 
 const randomName = (names) => {
