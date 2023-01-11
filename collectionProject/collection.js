@@ -15,13 +15,7 @@ const collection = [
         releaseYear: '2020',   
     },
 
-    {
-        artist: ['Bring Me The Horizon, BABYMETAL'],
-        album: 'POST HUMAN: SURVIVAL HORROR',
-        song: 'Kingslayer',
-        genre: 'Post-Hardcore',
-        releaseYear: '2020',   
-    },
+    
 
     {
         artist: 'MIKA',
@@ -88,6 +82,28 @@ const collection = [
 },
 ]
 
+
+
+
+function addCard() {
+    const body = document.querySelector('body');
+    //console.log(body);
+    const section = document.querySelector('section');
+    //console.log(section);
+    const newDiv = document.createElement('div');
+    section.append(newDiv);
+    //console.log(section);
+    const newParagraph = document.createElement('p');
+    const dateContent = document.createTextNode(collection[i].artist);
+    newParagraph.append(dateContent);
+    //console.log(newParagraph);
+    newDiv.append(newParagraph);
+    console.log(newDiv);
+    
+}
+
+
+for (var i = 0; i < collection.length; i++) addCard(i);
 
 
 

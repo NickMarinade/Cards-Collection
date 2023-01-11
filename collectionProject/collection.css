@@ -29,6 +29,11 @@ header {
     width: 140px;
 }
 
+section {
+    background-color: white;
+    margin-top: 50px;
+}
+
 
 @media(max-width: 520px) {
 
