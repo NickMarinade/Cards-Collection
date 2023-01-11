@@ -93,12 +93,31 @@ function addCard() {
     const newDiv = document.createElement('div');
     section.append(newDiv);
     //console.log(section);
-    const newParagraph = document.createElement('p');
-    const dateContent = document.createTextNode(collection[i].artist);
-    newParagraph.append(dateContent);
+    const releaseParagraph = document.createElement('p');
+    const genreParagraph = document.createElement('p');
+    const songH1 = document.createElement('h1');
+    const artistH1 = document.createElement('h1');
+    const albumH2 = document.createElement('h2');
+    const artistContent = document.createTextNode(collection[i].artist);
+    const albumContent = document.createTextNode(collection[i].album);
+    const songContent = document.createTextNode(collection[i].song);
+    const genreContent = document.createTextNode(collection[i].genre);
+    const releaseContent = document.createTextNode(collection[i].releaseYear);
+    releaseParagraph.append(releaseContent);
+    genreParagraph.append(genreContent);
+    songH1.append(songContent);
+    artistH1.append(artistContent);
+    albumH2.append(albumContent);
     //console.log(newParagraph);
-    newDiv.append(newParagraph);
+    newDiv.append(releaseParagraph);
+    newDiv.append(genreParagraph);
+    newDiv.append(songH1);
+    newDiv.append(artistH1);
+    newDiv.append(albumH2);
     console.log(newDiv);
+
+
+
     
 }
 

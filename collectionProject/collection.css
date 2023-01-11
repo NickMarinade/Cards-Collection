@@ -15,6 +15,11 @@ body {
     background-color: #191414;
 }
 
+.showcase {
+    display: flex;
+    flex-direction: column;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -30,8 +35,26 @@ header {
 }
 
 section {
-    background-color: white;
-    margin-top: 50px;
+    background-color: rgb(207, 243, 209);
+    color: #1DB954;
+    padding: 0 20px 0px 20px;
+    /* width: 50%; */
+   
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-color: #191414 ;
+    margin-top: 20px;
+    padding: 20px 20px 20px 20px;
+    
+}
+
+h1, h2, p {
+    padding-top: 10px;
 }
 
 
