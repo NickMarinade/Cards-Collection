@@ -144,7 +144,7 @@ function addList1() {
     article.append(div1);
     let imgLink = document.createElement('a');
     imgLink.classList.add('main-img');
-    imgLink.href = '#';
+    imgLink.href = 'https://open.spotify.com/playlist/5SbolIKfbm1jH5ONasVHPF?si=35cb83f21785444c';
     div1.append(imgLink);
     let imageSpotify = document.createElement('img');
     imageSpotify.src = 'https://e1.pngegg.com/pngimages/479/641/png-clipart-spotify-macos-style-spotify-logo-thumbnail.png'
@@ -152,7 +152,7 @@ function addList1() {
     let imgLink2 = document.createElement('a');
     imgLink2.classList.add('main-img');
     imgLink2.setAttribute('id', 'secondImg');
-    imgLink2.href = '#';
+    imgLink2.href = 'https://open.spotify.com/playlist/5SbolIKfbm1jH5ONasVHPF?si=35cb83f21785444c';
     div1.append(imgLink2);
     let imageSong = document.createElement('img');
     imageSong.src = list1[i].image;
