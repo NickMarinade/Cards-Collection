@@ -15,18 +15,13 @@ body {
     background-color: #191414;
 }
 
-.showcase {
-    display: flex;
-    flex-direction: column;
-}
-
-header {
+.mainHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 10%;
     background-color: #1DB954;
-    color: rgb(207, 243, 209);
+    color: rgb(96, 218, 102);
 }
 
 .logo {
@@ -34,27 +29,102 @@ header {
     width: 140px;
 }
 
-section {
-    background-color: rgb(207, 243, 209);
-    color: #1DB954;
-    padding: 0 20px 0px 20px;
-    /* width: 50%; */
-   
+
+a {
+    text-decoration: none;
 }
 
-div {
+.card-list {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-color: #191414 ;
-    margin-top: 20px;
-    padding: 20px 20px 20px 20px;
+    padding: 2rem;
+    overflow-x: scroll;
     
 }
 
-h1, h2, p {
-    padding-top: 10px;
+.card {
+    height: 350px;
+    width: 400px;
+    min-width: 250px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;
+    color: #1DB954;
+}
+
+.card:focus-within~.card, .card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+
+.card-header {
+    margin-bottom: auto;
+}
+
+.card-header p {
+    font-size: 14px;
+    margin: 0 0 1rem;
+    color: #7a7a8c;
+}
+
+.card-header h2 {
+    font-size: 20px;
+    margin: .25rem 0 auto;
+    text-decoration: none;
+    border: 0;
+    display: inline-block;
+}
+
+.card-main {
+    margin: 3rem 0 0;
+    display: grid;
+    grid-template-columns: 75px 1fr;
+    align-items: center;
+    position: relative;
+}
+
+.main-img {
+    grid-area: auto;
+    align-self: start;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.main-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    overflow: hidden;
+    margin: 16px 10px;
+}
+
+.main-name {
+    grid-area: auto;
+    box-sizing: border-box;
+}
+
+.genre p {
+    margin: 1rem 0 2rem;
+    padding: .5rem 0 1rem;
+    line-height: 2;
+    margin-bottom: 0;
+    color: #7a7a8c;
 }
 
 
@@ -70,3 +140,4 @@ h1, h2, p {
 
    
 }
+
