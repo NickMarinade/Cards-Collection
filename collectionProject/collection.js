@@ -1,4 +1,4 @@
-const collection = [
+const list1 = [
     {
         artist: ['Bring Me The Horizon, BABYMETAL'],
         album: 'POST HUMAN: SURVIVAL HORROR',
@@ -26,109 +26,110 @@ const collection = [
     },
 
     {
-    artist: 'Arctic Monkeys',
-    album: 'Favourite Worst Nightmare',
-    song: 'Brainstorm',
-    genre: 'Alternative Rock',
-    releaseYear: '2007',   
-},
+        artist: 'Arctic Monkeys',
+        album: 'Favourite Worst Nightmare',
+        song: 'Brainstorm',
+        genre: 'Alternative Rock',
+        releaseYear: '2007',   
+    },
 
-{
-    artist: 'SiM',
-    album: 'Single',
-    song: 'The Rumbling',
-    genre: 'J-Rock',
-    releaseYear: '2022',   
-},
-
-{
-    artist: 'Mick Gordon',
-    album: 'Doom Original Game Soudtrack',
-    song: 'Rip & Tear',
-    genre: 'Speed Metal',
-    releaseYear: '2016',   
-},
-
-{
-    artist: 'KASAI HARCORES',
-    album: 'KASAI HARCORES ALL STAR',
-    song: 'CYCLE HIT',
-    genre: 'Dance',
-    releaseYear: '2017',   
-},
-
-{
-    artist: 'Avenged Sevenfold',
-    album: 'Avenged Sevenfold',
-    song: 'Scream',
-    genre: 'Rock',
-    releaseYear: '2020',   
-},
-
-{
-    artist: 'AC/DC',
-    album: 'Back in Black',
-    song: 'Shoot to Thrill',
-    genre: 'Rock',
-    releaseYear: '1980',   
-},
-
-{
-    artist: 'Woodkid',
-    album: 'Arcane Soundtrack',
-    song: 'Guns for Hire',
-    genre: 'Neofolk',
-    releaseYear: 2021,   
-},
+    {
+        artist: 'SiM',
+        album: 'Single',
+        song: 'The Rumbling',
+        genre: 'J-Rock',
+        releaseYear: '2022',   
+    },
 ]
 
-
-
-
-function addCard() {
-    const body = document.querySelector('body');
-    //console.log(body);
-    const section = document.querySelector('section');
-    //console.log(section);
-    const newDiv = document.createElement('div');
-    section.append(newDiv);
-    //console.log(section);
-    const releaseParagraph = document.createElement('p');
-    const genreParagraph = document.createElement('p');
-    const songH1 = document.createElement('h1');
-    const artistH1 = document.createElement('h1');
-    const albumH2 = document.createElement('h2');
-    const artistContent = document.createTextNode(collection[i].artist);
-    const albumContent = document.createTextNode(collection[i].album);
-    const songContent = document.createTextNode(collection[i].song);
-    const genreContent = document.createTextNode(collection[i].genre);
-    const releaseContent = document.createTextNode(collection[i].releaseYear);
-    releaseParagraph.append(releaseContent);
-    genreParagraph.append(genreContent);
-    songH1.append(songContent);
-    artistH1.append(artistContent);
-    albumH2.append(albumContent);
-    //console.log(newParagraph);
-    newDiv.append(releaseParagraph);
-    newDiv.append(genreParagraph);
-    newDiv.append(songH1);
-    newDiv.append(artistH1);
-    newDiv.append(albumH2);
-    console.log(newDiv);
-
-
-
+const list2 =  [
+    {
+        artist: 'Mick Gordon',
+        album: 'Doom Original Game Soudtrack',
+        song: 'Rip & Tear',
+        genre: 'Speed Metal',
+        releaseYear: '2016',   
+    },
     
+    {
+        artist: 'KASAI HARCORES',
+        album: 'KASAI HARCORES ALL STAR',
+        song: 'CYCLE HIT',
+        genre: 'Dance',
+        releaseYear: '2017',   
+    },
+    
+    {
+        artist: 'Avenged Sevenfold',
+        album: 'Avenged Sevenfold',
+        song: 'Scream',
+        genre: 'Rock',
+        releaseYear: '2020',   
+    },
+    
+    {
+        artist: 'AC/DC',
+        album: 'Back in Black',
+        song: 'Shoot to Thrill',
+        genre: 'Rock',
+        releaseYear: '1980',   
+    },
+    
+    {
+        artist: 'Woodkid',
+        album: 'Arcane Soundtrack',
+        song: 'Guns for Hire',
+        genre: 'Neofolk',
+        releaseYear: 2021,   
+    },
+]
+
+function addList1() {
+    
+    let body = document.querySelector('body');
+    let section = document.querySelector('section');
+    section.classList.add("card-list");
+    body.append(section);
+
+    let article = document.createElement('article');
+    article.classList.add('card')
+    section.append(article);
+
+    let header = document.createElement('header');
+    header.classList.add('card-header')
+    article.append(header);
+    let paragraphHeader = document.createElement('p');
+    let h2Header = document.createElement('h2');
+    header.append(paragraphHeader, h2Header);
+    let releaseContent = document.createTextNode(list1[i].releaseYear);
+    let albumContent = document.createTextNode(list1[i].album);
+    paragraphHeader.append(releaseContent);
+    h2Header.append(albumContent);
+
+    let div1 = document.createElement('div');
+    div1.classList.add('card-main');
+    article.append(div1);
+    let imgLink = document.createElement('a');
+    imgLink.classList.add('main-img');
+    imgLink.href = '#';
+    div1.append(imgLink);
+    let imageSpotify = document.createElement('img');
+    imageSpotify.src = 'https://e1.pngegg.com/pngimages/479/641/png-clipart-spotify-macos-style-spotify-logo-thumbnail.png'
+    imgLink.append(imageSpotify);
+
+    let div2 = document.createElement('div');
+    div2.classList.add('card-main');
+    div1.append(div2);
+    let imgLink2 = document.createElement('a');
+    imgLink2.classList.add('main-img');
+    imgLink2.href = '#';
+    div2.append(imgLink2);
+    let imageSong = document.createElement('img');
+    imgLink2.append(imageSong);
 }
 
 
-for (var i = 0; i < collection.length; i++) addCard(i);
-
-
-
-
-
-
-
+for (var i = 0; i < list1.length; i++) addList1(i);
+console.log(document.querySelector('body'))
 
 
