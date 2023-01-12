@@ -116,16 +116,32 @@ function addList1() {
     let imageSpotify = document.createElement('img');
     imageSpotify.src = 'https://e1.pngegg.com/pngimages/479/641/png-clipart-spotify-macos-style-spotify-logo-thumbnail.png'
     imgLink.append(imageSpotify);
-
-    let div2 = document.createElement('div');
-    div2.classList.add('card-main');
-    div1.append(div2);
     let imgLink2 = document.createElement('a');
     imgLink2.classList.add('main-img');
     imgLink2.href = '#';
-    div2.append(imgLink2);
+    div1.append(imgLink2);
     let imageSong = document.createElement('img');
     imgLink2.append(imageSong);
+
+    let div2 = document.createElement('div');
+    div2.classList.add('main-name');
+    article.append(div2);
+    let paragraphName = document.createElement('p');
+    let h2Name = document.createElement('h2');
+    div2.append(h2Name, paragraphName);
+    let songContent = document.createTextNode(list1[i].song);
+    let artistContent = document.createTextNode(list1[i].artist);
+    paragraphName.append(artistContent);
+    h2Name.append(songContent);
+
+    let div3 = document.createElement('div');
+    div3.classList.add('genre');
+    article.append(div3);
+    let paragraphGenre = document.createElement('p');
+    div3.append(paragraphGenre);
+    let genreContent = document.createTextNode(list1[i].genre);
+    paragraphGenre.append(genreContent);
+
 }
 
 
