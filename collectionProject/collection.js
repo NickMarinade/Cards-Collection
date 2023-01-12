@@ -84,14 +84,33 @@ const list2 =  [
     },
 ]
 
+let body = document.querySelector('body');
+let header = document.createElement('header');
+header.classList.add('mainHeader');
+let logo = document.createElement('img');
+logo.classList.add('logo');
+logo.src = 'https://cdn.usbrandcolors.com/images/logos/spotify-logo.svg'
+header.append(logo);
+
+let navigation = document.createElement('nav');
+header.append(navigation);
+let navH1 = document.createElement('h1');
+let navParagraph = document.createElement('p');
+let contentH1 = document.createTextNode('Spotify Specials');
+let contentP1 = document.createTextNode('selected by me');
+navH1.append(contentH1);
+navParagraph.append(contentP1);
+navigation.append(navH1, navParagraph);
+body.append(header);
+
+
+
+
 let section = document.createElement('section');
 section.classList.add("card-list");
 let section2 = document.createElement('section');
 section2.classList.add("card-list");
-section2.setAttribute('id', 'section2');
-let body = document.querySelector('body');
 body.append(section, section2);
-console.log(body);
 
 function addList1() {
 
