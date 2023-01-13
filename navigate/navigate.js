@@ -22,6 +22,12 @@ secondSection.append(h2Third);
 //console.log(secondSection);
 thirdSection.append(h2Second);
 
+//Delete the last section from the DOM, we don't need it anyways
+
+main.children[2].remove();
+
+
+
 
 
 
