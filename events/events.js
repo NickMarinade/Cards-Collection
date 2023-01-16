@@ -38,19 +38,25 @@ const clickOnSquare = (e) => {
     newOrange.classList.add('orange');
     newOrange.classList.add('displayedsquare');
     wrapperSection.append(newOrange);
-    
+
   } else {
     console.error('error');
   }
 
-}
+};
+
+function getHex(){
+  return '#' + Math.random().toString(16).slice(2, 8);
+};
+
+function setBackground(){
+  var bgColor = getHex();
+  document.body.style.background=bgColor;
+};
 
 
 
-const actionSquares = document.querySelectorAll('.actionsquare')
-for (let actionSquare of actionSquares) {
-  actionSquare.addEventListener('click', clickOnSquare)
-}
+
 
 
 
