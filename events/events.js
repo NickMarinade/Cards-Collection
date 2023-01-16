@@ -20,6 +20,7 @@ const clickOnSquare = (e) => {
     newGreen.classList.add('green');
     newGreen.classList.add('displayedsquare');
     wrapperSection.append(newGreen);
+
   } else if(e.target.classList[1] === 'violet') {
     let newViolet = document.createElement('div');
     let violetLog = document.createElement('li');
@@ -28,6 +29,7 @@ const clickOnSquare = (e) => {
     newViolet.classList.add('violet');
     newViolet.classList.add('displayedsquare');
     wrapperSection.append(newViolet);
+
   } else if (e.target.classList[1] === 'orange') {
     let newOrange = document.createElement('div');
     let orangeLog = document.createElement('li');
@@ -36,6 +38,7 @@ const clickOnSquare = (e) => {
     newOrange.classList.add('orange');
     newOrange.classList.add('displayedsquare');
     wrapperSection.append(newOrange);
+    
   } else {
     console.error('error');
   }
