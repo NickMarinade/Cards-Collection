@@ -20,3 +20,11 @@ document.addEventListener('keyup', event => {
           }
     };
   });
+
+  document.addEventListener('keyup', event => {
+    if (event.code === 'KeyS') {
+        while (wrapperSection.firstChild) {
+            wrapperSection.removeChild(wrapperSection.lastChild);
+          }
+    };
+  });
