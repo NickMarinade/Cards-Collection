@@ -21,7 +21,7 @@ const clickOnSquare = (e) => {
     newGreen.classList.add('displayedsquare');
     wrapperSection.append(newGreen);
 
-  } else if(e.target.classList[1] === 'violet') {
+  } else if (e.target.classList[1] === 'violet') {
     let newViolet = document.createElement('div');
     let violetLog = document.createElement('li');
     violetLog.append(getElapsedTime(), ', Violet');
@@ -44,6 +44,22 @@ const clickOnSquare = (e) => {
   }
 
 };
+
+const showAlert = (e) => {
+  if (e.target.classList[0] === 'green') {
+    alert('This box is green');
+  
+  } else if (e.target.classList[0] === 'violet') {
+    alert('This box is violet');
+  
+  } else if (e.target.classList[0] === 'orange') {
+    alert('This box is orange');
+  
+  } else {
+    console.error('error');
+  }
+};
+
 
 function getHex(){
   return '#' + Math.random().toString(16).slice(2, 8);

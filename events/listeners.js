@@ -13,6 +13,8 @@ for (let actionSquare of actionSquares) {
   actionSquare.addEventListener('click', clickOnSquare)
 };
 
+document.querySelector(".displayedsquare-wrapper").addEventListener('click', showAlert);
+
 document.addEventListener('keyup', event => {
     if (event.code === 'KeyL') {
         while (logUl.firstChild) {
