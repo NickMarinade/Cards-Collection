@@ -15,3 +15,10 @@ a {
 a:hover {
     color: red;
 }
+
+div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
